@@ -1,0 +1,32 @@
+{
+  "events": [
+    {
+      "amount": 1,
+      "player_id": "p1",
+      "round": 1,
+      "turn_index": 0,
+      "type": "resource_gained"
+    },
+    {
+      "cost": 2,
+      "progress": 2,
+      "player_id": "p1",
+      "round": 2,
+      "turn_index": 0,
+      "type": "card_played",
+      "card_id": "card-advance-1",
+      "card_name": "Advance"
+    }
+  ],
+  "players": [
+    {
+      "discard_count": 1,
+      "player_id": "p1",
+      "progress": 2,
+      "resources": 0
+    }
+  ],
+  "seed": 7,
+  "turn_count": 4,
+  "winner_id": null
+}

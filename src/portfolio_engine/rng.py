@@ -1,0 +1,23 @@
+from __future__ import annotations
+
+import random
+from collections.abc import Sequence
+from typing import TypeVar
+
+
+T = TypeVar("T")
+
+
+class SeededRng:
+    def __init__(self, seed: int) -> None:
+        self._rng = random.Random(seed)
+
+    def shuffled(self, items: Sequence[T]) -> tuple[T, ...]:
+        result = list(items)
+        self._rng.shuffle(result)
+        return tuple(result)
+
+    def choice(self, items: Sequence[T]) -> T:
+        if not items:
+            raise ValueError("Cannot choose from an empty sequence.")
+        return self._rng.choice(list(items))

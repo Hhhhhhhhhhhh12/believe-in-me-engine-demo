@@ -1,0 +1,10 @@
+__pycache__/
+.pytest_cache/
+.venv/
+*.pyc
+dist/
+build/
+*.egg-info/
+
+# Generated local outputs
+examples/generated/
