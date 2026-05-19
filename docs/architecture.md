@@ -22,3 +22,13 @@ resources, play a card, convert resources into progress, or pass. The first
 player reaching the target progress wins.
 
 All names and values are synthetic placeholders for the public demo.
+
+## Verification
+
+`make verify` combines two checks:
+
+- unit and contract tests
+- a repository redaction scan
+
+The scan is intentionally simple. It is not a replacement for human review, but
+it makes accidental disclosure harder before changes are pushed.

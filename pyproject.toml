@@ -10,6 +10,21 @@ readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
 authors = [{ name = "Believe in Me" }]
+keywords = ["deterministic-engine", "simulation", "testing", "portfolio"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Testing",
+]
+
+[project.urls]
+Repository = "https://github.com/Hhhhhhhhhhhh12/believe-in-me-engine-demo"
+Documentation = "https://github.com/Hhhhhhhhhhhh12/believe-in-me-engine-demo/blob/main/docs/reviewer_guide.md"
 
 [tool.setuptools.packages.find]
 where = ["src"]
