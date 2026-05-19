@@ -4,7 +4,7 @@ from dataclasses import dataclass
 
 from .legal_moves import LegalMove, legal_moves
 from .rng import SeededRng
-from .rules import apply_move, build_public_deck, create_game
+from .rules import apply_move, build_sample_deck, create_game
 from .state import GameState
 
 
@@ -21,7 +21,7 @@ class RunResult:
 
 def run_match(*, seed: int, player_count: int = 3, max_turns: int = 60) -> RunResult:
     rng = SeededRng(seed)
-    deck = rng.shuffled(build_public_deck())
+    deck = rng.shuffled(build_sample_deck())
     state = create_game(player_count=player_count, deck=deck)
 
     turn_count = 0

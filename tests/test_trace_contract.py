@@ -1,10 +1,10 @@
 import json
 
-from portfolio_engine.runner import run_match
-from portfolio_engine.trace import trace_json, trace_payload
+from believe_engine.runner import run_match
+from believe_engine.trace import trace_json, trace_payload
 
 
-def test_trace_payload_exposes_public_safe_fields() -> None:
+def test_trace_payload_exposes_stable_fields() -> None:
     result = run_match(seed=5)
     payload = trace_payload(result)
 

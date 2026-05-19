@@ -1,8 +1,8 @@
 from dataclasses import replace
 
-from portfolio_engine.legal_moves import legal_moves
-from portfolio_engine.rules import create_game
-from portfolio_engine.state import replace_player
+from believe_engine.legal_moves import legal_moves
+from believe_engine.rules import create_game
+from believe_engine.state import replace_player
 
 
 def test_gather_and_pass_are_always_available_during_match() -> None:

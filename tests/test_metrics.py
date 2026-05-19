@@ -1,5 +1,5 @@
-from portfolio_engine.metrics import summarize_results
-from portfolio_engine.runner import run_match
+from believe_engine.metrics import summarize_results
+from believe_engine.runner import run_match
 
 
 def test_summarize_results_counts_games_and_winners() -> None:

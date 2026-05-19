@@ -1,4 +1,4 @@
-"""Sanitized deterministic engine demo for the Believe in Me portfolio."""
+"""Deterministic engine example for the Believe in Me project."""
 
 from .runner import RunResult, run_match
 

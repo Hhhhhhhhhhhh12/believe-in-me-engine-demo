@@ -6,7 +6,7 @@ from .legal_moves import LegalMove, legal_moves
 from .state import DemoCard, GameState, PlayerState, replace_player
 
 
-def build_public_deck() -> tuple[DemoCard, ...]:
+def build_sample_deck() -> tuple[DemoCard, ...]:
     return (
         DemoCard("card-advance-1", "Advance", cost=2, progress=2),
         DemoCard("card-advance-2", "Advance", cost=2, progress=2),
@@ -23,7 +23,7 @@ def create_game(*, player_count: int = 3, deck: tuple[DemoCard, ...] | None = No
     if player_count < 2:
         raise ValueError("At least two players are required.")
 
-    draw_pile = deck or build_public_deck()
+    draw_pile = deck or build_sample_deck()
     players = tuple(
         PlayerState(player_id=f"p{index + 1}", hand=draw_pile[index : index + 1])
         for index in range(player_count)

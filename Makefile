@@ -10,6 +10,6 @@ demo:
 	PYTHONPATH=src $(PYTHON) examples/run_demo.py
 
 scan:
-	PYTHONPATH=src $(PYTHON) scripts/redaction_scan.py
+	PYTHONPATH=src $(PYTHON) scripts/content_scan.py
 
 verify: test scan

@@ -1,7 +1,7 @@
 # Contributing
 
-This repository is intentionally small and public-safe. Contributions should
-preserve that shape.
+This repository is intentionally small. Contributions should preserve that
+shape.
 
 ## Local Check
 
@@ -12,10 +12,10 @@ make verify
 
 ## Scope Rules
 
-- Keep the engine model synthetic.
+- Keep the engine model compact.
 - Keep examples compact and deterministic.
 - Add tests for behavior changes.
-- Do not add production assets, private notes, or unpublished source material.
+- Do not add production assets, large generated outputs, or local credentials.
 
 ## Pull Request Standard
 
@@ -23,4 +23,4 @@ A useful pull request explains:
 
 - what behavior changed
 - which tests cover it
-- whether the redaction scan was updated
+- whether the content scan was updated

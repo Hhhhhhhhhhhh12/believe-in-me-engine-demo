@@ -1,19 +1,18 @@
 # Security Policy
 
-This public demo does not process credentials, personal data, production data,
-or private source assets.
+This project does not process credentials, personal data, production data, or
+third-party secrets.
 
 ## Reporting
 
-If you find a security or disclosure issue, open a GitHub issue with a minimal
-description of the affected file and why it is risky. Do not paste secrets or
-private material into the issue.
+If you find a security issue, open a GitHub issue with a minimal description of
+the affected file and why it is risky. Do not paste secrets into the issue.
 
-## Disclosure Boundary
+## Data Boundary
 
 The repository is designed to contain only:
 
-- synthetic demo data
-- public-safe documentation
+- sample data
+- project documentation
 - test fixtures created for this repository
 - deterministic example output

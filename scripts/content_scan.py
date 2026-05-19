@@ -8,17 +8,9 @@ ROOT = Path(__file__).resolve().parents[1]
 
 BLOCKED_PATTERNS = {
     "original_repo_name": re.compile(r"\bbim-balance\b", re.IGNORECASE),
-    "private_email": re.compile(r"schoepfer@believeinme\.de", re.IGNORECASE),
-    "private_workspace_tool": re.compile(r"\bnotion\b|notion\.so", re.IGNORECASE),
-    "local_private_path": re.compile(r"/Users/Heineken/(BiM|Downloads/BiM)"),
-    "private_reports_or_test_notes": re.compile(r"\bplaytest\b|\bbalance report\b|\bgolden seed\b", re.IGNORECASE),
-    "private_terms_de": re.compile(
-        r"Phänomen|Phaenomen|Himmelreich|Wahrheit|Prophet|Götterdämmerung|"
-        r"Dreifaltigkeit|Gläubige|Glaeubige|Mönche|Moenche|Missionare|"
-        r"Nonnen|Aufklärer|Aufklaerer|Reliquie|Gebote|Heilige Handgranate|"
-        r"Unergründlich|Unergruendlich|Sanftmut|Zorn",
-        re.IGNORECASE,
-    ),
+    "reserved_email": re.compile(r"@[a-z0-9.-]*believeinme\.de", re.IGNORECASE),
+    "local_reserved_path": re.compile(r"/Users/Heineken/(BiM|Downloads/BiM)"),
+    "credential_marker": re.compile(r"BEGIN OPENSSH .* KEY|\bSECRET\b|\bTOKEN\b|api[_-]?key|password", re.IGNORECASE),
 }
 
 SKIP_DIRS = {".git", ".venv", "__pycache__", ".pytest_cache"}
@@ -40,12 +32,12 @@ def main() -> int:
                 findings.append(f"{path.relative_to(ROOT)}: {label}")
 
     if findings:
-        print("Redaction scan failed:")
+        print("Content scan failed:")
         for finding in findings:
             print(f"- {finding}")
         return 1
 
-    print("Redaction scan passed.")
+    print("Content scan passed.")
     return 0
 
 

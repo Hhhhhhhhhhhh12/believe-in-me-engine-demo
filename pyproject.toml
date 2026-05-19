@@ -3,14 +3,14 @@ requires = ["setuptools>=69"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "believe-in-me-engine-demo"
+name = "believe-in-me-engine-core"
 version = "0.1.0"
-description = "A sanitized deterministic engine demo for the Believe in Me portfolio."
+description = "A compact deterministic Python engine for a turn-based resource system."
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
 authors = [{ name = "Believe in Me" }]
-keywords = ["deterministic-engine", "simulation", "testing", "portfolio"]
+keywords = ["deterministic-engine", "simulation", "testing", "turn-based"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
@@ -24,7 +24,7 @@ classifiers = [
 
 [project.urls]
 Repository = "https://github.com/Hhhhhhhhhhhh12/believe-in-me-engine-demo"
-Documentation = "https://github.com/Hhhhhhhhhhhh12/believe-in-me-engine-demo/blob/main/docs/reviewer_guide.md"
+Documentation = "https://github.com/Hhhhhhhhhhhh12/believe-in-me-engine-demo/blob/main/docs/technical_overview.md"
 
 [tool.setuptools.packages.find]
 where = ["src"]

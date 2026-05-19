@@ -1,18 +1,18 @@
-# Believe in Me - Engine Demo
+# Believe in Me - Engine Core
 
 [![Verify](https://github.com/Hhhhhhhhhhhh12/believe-in-me-engine-demo/actions/workflows/verify.yml/badge.svg)](https://github.com/Hhhhhhhhhhhh12/believe-in-me-engine-demo/actions/workflows/verify.yml)
 [![Python](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-This repository is a sanitized portfolio demo for a deterministic game-engine
-workflow. It keeps the public-facing `Believe in Me` name, but the model,
-cards, numbers, rules, examples, and traces are synthetic.
+This repository is a compact deterministic Python engine for a turn-based
+resource system. It uses the `Believe in Me` name while keeping the mechanics
+small, inspectable, and easy to run locally.
 
 ## Why This Exists
 
-The goal is to show the engineering shape of a game-engine project without
-publishing private product content. The demo focuses on reproducibility,
-state-transition clarity, test coverage, and public-safe trace output.
+The project focuses on reproducibility, state-transition clarity, test
+coverage, and traceable engine events. The rule set is intentionally small so
+the code can be reviewed quickly.
 
 ## What This Shows
 
@@ -23,14 +23,14 @@ state-transition clarity, test coverage, and public-safe trace output.
 - small metric aggregation
 - focused regression tests
 
-## What This Does Not Include
+## Project Boundaries
 
-- unpublished board-game rules
-- real card names or card text
-- internal analysis outputs
-- private test notes
-- private workflow documents
+The repository intentionally leaves out:
+
 - production assets
+- long-form design notes
+- generated analysis outputs
+- large data files
 
 ## Run
 
@@ -40,13 +40,13 @@ make demo
 make verify
 ```
 
-The demo prints a compact trace summary and aggregate metrics for a small
-synthetic match.
+The command prints a compact trace summary and aggregate metrics for a small
+sample match.
 
 Example output:
 
 ```text
-Believe in Me - Engine Demo
+Believe in Me - Engine Core
 Primary seed: 7
 Winner: p3
 Turns: 45
@@ -54,13 +54,13 @@ Events: 46
 Metrics: {'games': 10, 'winner_counts': {'p1': 5, 'p2': 4, 'p3': 1}, 'average_turns': 47.5}
 ```
 
-## Review Path
+## Read Path
 
-For a quick external review, start with:
+For a quick technical read, start with:
 
-- `docs/reviewer_guide.md`
+- `docs/technical_overview.md`
 - `docs/architecture.md`
-- `docs/redaction_policy.md`
+- `docs/content_guidelines.md`
 - `tests/`
 
 ## Architecture
@@ -71,7 +71,7 @@ The engine is deliberately small:
 - `legal_moves.py` exposes available commands.
 - `rules.py` applies one command at a time.
 - `runner.py` drives seeded simulations.
-- `trace.py` serializes public-safe events.
+- `trace.py` serializes stable event payloads.
 - `metrics.py` summarizes runs.
 
-See `docs/architecture.md` and `docs/redaction_policy.md` for the public scope.
+See `docs/architecture.md` and `docs/content_guidelines.md` for the project scope.
